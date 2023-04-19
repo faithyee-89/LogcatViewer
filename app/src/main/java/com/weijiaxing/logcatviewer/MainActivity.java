@@ -1,10 +1,11 @@
 package com.weijiaxing.logcatviewer;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.weijiaxing.logcatviewer.ui.UseFloatingLogcatServiceActivity;
 import com.weijiaxing.logcatviewer.ui.UseLogcatActivity;

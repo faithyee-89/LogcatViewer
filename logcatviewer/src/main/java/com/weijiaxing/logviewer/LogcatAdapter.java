@@ -1,7 +1,6 @@
 package com.weijiaxing.logviewer;
 
 
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +9,8 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Locale;
@@ -17,7 +18,8 @@ import java.util.Locale;
 public class LogcatAdapter extends BaseAdapter implements Filterable {
 
     private ArrayList<LogItem> mData;
-    @Nullable private ArrayList<LogItem> mFilteredData = null;
+    @Nullable
+    private ArrayList<LogItem> mFilteredData = null;
     @Nullable private String mFilter = null;
 
     LogcatAdapter() {

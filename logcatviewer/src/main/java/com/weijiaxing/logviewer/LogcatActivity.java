@@ -9,10 +9,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,6 +16,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -210,8 +211,8 @@ public class LogcatActivity extends AppCompatActivity implements View.OnClickLis
                 @Override
                 protected void onPostExecute(File file) {
                     if (file == null) {
-                        Snackbar.make(mRoot, R.string.create_log_file_failed, Snackbar.LENGTH_SHORT)
-                                .show();
+//                        Toast.makeText(this, R.string.create_log_file_failed, Toast.LENGTH_SHORT)
+//                                .show();
                     } else {
                         Intent shareIntent = new Intent(Intent.ACTION_SEND);
 
@@ -222,8 +223,8 @@ public class LogcatActivity extends AppCompatActivity implements View.OnClickLis
                         shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
                         if (getPackageManager().queryIntentActivities(
                                 shareIntent, 0).isEmpty()) {
-                            Snackbar.make(mRoot, R.string.not_support_on_this_device,
-                                    Snackbar.LENGTH_SHORT).show();
+//                            Snackbar.make(mRoot, R.string.not_support_on_this_device,
+//                                    Snackbar.LENGTH_SHORT).show();
                         } else {
                             startActivity(shareIntent);
                         }
@@ -241,8 +242,8 @@ public class LogcatActivity extends AppCompatActivity implements View.OnClickLis
                 Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
                         Uri.parse("package:" + getPackageName()));
                 if (getPackageManager().queryIntentActivities(intent, 0).isEmpty()) {
-                    Snackbar.make(mRoot, R.string.not_support_on_this_device,
-                            Snackbar.LENGTH_SHORT).show();
+//                    Snackbar.make(mRoot, R.string.not_support_on_this_device,
+//                            Snackbar.LENGTH_SHORT).show();
                 } else {
                     startActivityForResult(intent, REQUEST_SCREEN_OVERLAY);
                 }

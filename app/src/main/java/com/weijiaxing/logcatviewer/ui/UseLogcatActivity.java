@@ -1,7 +1,8 @@
 package com.weijiaxing.logcatviewer.ui;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.weijiaxing.logcatviewer.R;
 import com.weijiaxing.logviewer.LogcatActivity;

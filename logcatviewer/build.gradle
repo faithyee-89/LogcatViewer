@@ -1,29 +1,12 @@
-buildscript {
-    repositories {
-        google()
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
-    }
-}
-
-repositories {
-    google()
-    jcenter()
-}
-
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
-
+    namespace 'com.weijiaxing.logviewer'
+    compileSdk 32
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 28
+        minSdk 24
+        targetSdk 32
         versionCode 3
         versionName "1.0.3"
     }
@@ -38,17 +21,5 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:design:28.0.0'
-}
-
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: "file://" + projectDir + "/../maven")
-            pom.groupId = 'com.weijiaxing.logviewer'
-            pom.artifactId = 'library'
-            pom.version = android.defaultConfig.versionName
-        }
-    }
+    implementation 'androidx.appcompat:appcompat:1.5.1'
 }

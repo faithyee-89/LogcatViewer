@@ -1,0 +1,50 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.weijiaxing.logviewer" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="24"
+6-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml
+7        android:targetSdkVersion="32" />
+7-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+9-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:4:5-78
+9-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:4:22-75
+10
+11    <application>
+11-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:6:5-27:19
+12        <activity
+12-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:7:9-12:15
+13            android:name="com.weijiaxing.logviewer.LogcatActivity"
+13-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:8:13-67
+14            android:exported="true"
+14-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:10:13-36
+15            android:label=""
+15-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:9:13-29
+16            android:theme="@style/Theme.AppCompat.NoActionBar" />
+16-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:11:13-63
+17        <activity
+17-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:14:9-23:20
+18            android:name="com.weijiaxing.logviewer.LogcatDetailActivity"
+18-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:15:13-73
+19            android:exported="true"
+19-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:17:13-36
+20            android:label="Log detail"
+20-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:16:13-39
+21            android:theme="@style/Theme.AppCompat" >
+21-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:18:13-51
+22            <meta-data
+22-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:20:13-22:74
+23                android:name="android.support.PARENT_ACTIVITY"
+23-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:21:17-63
+24                android:value="com.weijiaxing.logviewer.LogcatActivity" />
+24-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:22:17-72
+25        </activity>
+26
+27        <service android:name="com.weijiaxing.logviewer.FloatingLogcatService" />
+27-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:25:9-81
+27-->/Users/faith_yee/Desktop/code/LogcatViewer/logcatviewer/src/main/AndroidManifest.xml:25:18-79
+28    </application>
+29
+30</manifest>

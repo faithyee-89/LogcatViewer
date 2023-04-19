@@ -7,12 +7,14 @@
         <activity
             android:name="com.weijiaxing.logviewer.LogcatActivity"
             android:label=""
+            android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             />
 
         <activity
             android:name="com.weijiaxing.logviewer.LogcatDetailActivity"
             android:label="Log detail"
+            android:exported="true"
             android:theme="@style/Theme.AppCompat"
             >
             <meta-data
